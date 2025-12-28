@@ -1,23 +1,22 @@
 package entidades;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Pessoa {
 	private int id;
 	private String nome;
 	private String telefone;
 	private int idade;
-	private String genero;
+	private String sexo;
 	private LocalDate dataCadastro;
 	
 	
-	public Pessoa(int id, String nome, String telefone, int idade, String genero, LocalDate dataCadastro){
+	public Pessoa(int id, String nome, String telefone, int idade, String sexo, LocalDate dataCadastro){
 		this.id = id;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.idade = idade;
-		this.genero = genero;
+		this.sexo = sexo;
 		this.dataCadastro = dataCadastro;
 	}
 
@@ -53,12 +52,12 @@ public class Pessoa {
 		this.idade = idade;
 	}
 	
-	public String getGenero(){
-		return genero;
+	public String getSexo(){
+		return sexo;
 	}
 	
-	public void setGenero(String genero){
-		this.genero = genero;
+	public void setSexo(String sexo){
+		this.sexo = sexo;
 	}
 	
 	public LocalDate getDataCadastro(){
@@ -68,15 +67,14 @@ public class Pessoa {
 	public void setDataCadastro(LocalDate dataCadastro){
 		this.dataCadastro = dataCadastro;
 	}
-	
-	
+		
 	@Override
 	public String toString(){
 		String saida = "Código Pessoa: "+getId()+
 				       "\nNome Pessoa:"+getNome()+
 				       "\nTelefone: "+getTelefone()+
 				       "\nIdade: "+getIdade()+	   
-				       "\nGenero: "+getGenero()+
+				       "\nSexo: "+getSexo()+
 				       "\nData de Cadastro: "+getDataCadastro(); 		
 		return saida;
 	}
